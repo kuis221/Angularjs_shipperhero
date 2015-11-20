@@ -1,0 +1,37 @@
+<div class="rfp-section">
+  <div class="rfp-header">
+    <div class="rfp-header-left">
+      <span>CONFIRMED</span>
+    </div>
+    <div class="rfp-header-right">
+      <span>VIEW ALL</span>
+    </div>
+  </div>
+  <div class="rfp-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name/Ref#</th>
+          <th>Pickup City/State</th>
+          <th>Delivery City/State</th>
+          <th>Carrier</th>
+          <th>Cost</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="data in confirmed_data">
+        <tr>
+          <td>{{data.nameRef}}</td>
+          <td>{{data.pickupCityState}}</td>
+          <td>{{data.deliveryCityState}}</td>
+          <td>{{data.carrier}}</td>
+          <td>{{data.cost}}</td>
+          <td>
+            <a href="#" class="action-button">View</a>
+            <a href="#" class="action-button">Contact</a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>

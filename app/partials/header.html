@@ -1,0 +1,67 @@
+<nav class="navbar navbar-default my-navbar">
+  <div class="container-fluid my-container-fluid">
+    <div class="navbar-header my-navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#shipper-nav">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">
+        <img src="assets/images/dashboard/logo.png" alt="logo" />
+      </a>
+    </div>
+    <div class="collapse navbar-collapse" id="shipper-nav">
+      <ul class="nav navbar-nav" id="content-nav">
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">RFPs<span class="caret my-caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#/rfp/dashboard">My RFPs</a></li>
+            <li><a href="#">Drafts</a></li>
+            <li><a href="#">Pending</a></li>
+            <li><a class="dropdown-last" href="#/rfp/new">Create New</a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Shipments<span class="caret my-caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#"></a></li>
+          </ul>
+        </li>
+        <li class="dropdown">
+          <a class="dropdown-toggle" data-toggle="dropdown">Carriers<span class="caret my-caret"></span></a>
+          <ul class="dropdown-menu">
+            <li><a href="#">Ratings</a></li>
+            <li><a class="dropdown-last" href="#">Invite Carriers</a></li>
+          </ul>
+        </li>
+      </ul>
+      <ul class="nav navbar-nav navbar-right" id="right-nav">
+        <li id="user-header">
+          <a href="#">
+            <span class="username">{{'Welcome ' + current_user + '!'}}</span>
+            <img src="assets/images/dashboard/user.png" alt="Current User" />
+          </a>
+        </li>
+        <li class="dropdown" id="user-settings">
+          <a class="dropdown-toggle" data-toggle="dropdown">
+            <img src="assets/images/dashboard/settings.png" alt="Settings" />
+          </a>
+          <ul class="dropdown-menu">
+            <li>
+              <a data-target="#"><i class="icon-user"></i><span>My Profile</span></a>
+            </li>
+            <li>
+              <a data-target="#"><i class="icon-calendar"></i><span>My Calendar</span></a>
+            </li>
+            <li>
+              <a data-target="#"><i class="icon-settings"></i><span>Account Settings</span></a>
+            </li>
+            <li>
+              <a data-target="#"><i class="icon-logout"></i><span>Logout</span></a>
+            </li>
+          </ul>              
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
