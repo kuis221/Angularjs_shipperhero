@@ -17,5 +17,9 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function($scope, $http) {
     $scope.confirmed_data = data;
   });
   $scope.current_user = 'Matt';
+
+  $scope.submit = function() {
+    
+  };
 }]);
 

@@ -273,17 +273,27 @@
 
 .action-button {
   background: #ffffff;
-  color: #a3a3a3;
-  border: 1px solid #a3a3a3;
+  color: #a3a3a3 !important;
+  border: 1px solid #a3a3a3 !important;
   border-radius: 5px;
-  padding: 6px 6px;  
+  padding: 6px 6px;
+  font-size: 12px;
+  text-decoration: none !important;  
+  line-height: normal !important;
 }
 
 .action-button:hover {
-  text-decoration: none;
+  text-decoration: none !important;
   background-color: #1f66c2;
-  border-color: #1f66c2;
+  border: 1px solid #1f66c2;
   color: #ffffff;
+  border-radius: 5px;
+}
+
+.action-button:focus {
+  border: 1px solid #1f66c2;
+  border-radius: 5px;
+  outline: none;
 }
 
 .rfp-new-section {
@@ -293,6 +303,7 @@
 
 .rfp-new-section>.row>h1 {
   font-weight: bold;
+  font-size: 24px;
   color: #1f66c2;
   text-align: center;
 }
@@ -332,14 +343,21 @@
   height: 54px;
 }
 
-.steps-unit a.step-item:hover, .steps-unit a.step-item:focus {
+.steps-unit a.step-item:hover, .steps-unit a.step-item:focus,
+.steps-unit.active a.step-item, .steps-unit.active a.step-item {
   border: 5px solid #1f66c2;
   background-color: #1f66c2;
 }
 
-.steps-unit a.step-item:hover .step-number, .steps-unit a.step-item:focus .step-number {
+.steps-unit a.step-item:hover .step-number, .steps-unit a.step-item:focus .step-number,
+.steps-unit.active .step-number, .steps-unit.active .step-number {
   background-color: #245fac;
   border: 1px solid #234b80;
+}
+
+.steps-unit a.step-item:hover + .step-comment, .steps-unit a.step-item:focus + .step-comment,
+.steps-unit.active a.step-item + .step-comment, .steps-unit.active a.step-item + .step-comment {
+  color: #245fac;
 }
 
 .steps-unit a.step-item .step-number {
@@ -355,14 +373,67 @@
   color: #fff;
 }
 
+.steps-unit.active a.step-item .step-number {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: inline-block;
+  background-color: #245fac;
+  border: 1px solid #234b80;
+  padding: 8px 15px;
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+}
+
 .steps-unit .step-comment {  
-  text-align: center;
-  color: #1f66c2;
+  text-align: center;  
   font-size: 15px;
   width: 52px;
   padding: 0 !important;
   margin: 0 !important;
   color: #bcbcbc;
+}
+
+#delivery-info-step, #shipment-timing-step, #shipment-info-step, #tracking-step {
+  display: none;
+}
+
+.my-form-control {
+  width: 85% !important;
+}
+
+.step-content {
+  margin-top: 22px;
+  padding: 20px 0;
+  border-top: 1px solid #d4dae1;
+}
+
+.border-bottom {  
+  height: 20px;
+  border-bottom: 1px solid #d4dae1;  
+}
+
+#step-title h2 {
+  text-align: center;
+  color: #1f66c2;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.form-button {
+  width: 219px;
+  margin: 30px auto;
+}
+
+.my-control-label {
+  color: #1f66c2;
+}
+
+@media (min-width: 992px) {
+  .my-col-md-offset {
+    margin-left: 12.5% !important;
+  }  
 }
 
 @media screen and (max-width: 991px) {
