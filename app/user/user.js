@@ -2,7 +2,7 @@
 
 var userApp = angular.module('myApp.user', ['ngRoute'])
 
-userApp.config(['$routeProvider', function($routeProvider) {
+userApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/', {
     templateUrl: 'user/index.html',
     controller: 'UserCtrl'

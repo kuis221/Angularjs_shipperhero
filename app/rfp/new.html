@@ -2,135 +2,20 @@
 	<div class="row">
 		<h1>Create New</h1>
 	</div>
-	<div class="steps">
-		<div class="steps-button">
-			<div class="steps-unit first">
-				<a href="#/rfp/new" class="step-item" id="pickup-info">
-					<span class="step-number">1</span>
-				</a>
-				<p class="step-comment">Pickup Info</p>
-			</div>
-			<div class="steps-unit">
-				<a href="#/rfp/new" class="step-item" id="delivery-info">
-					<span class="step-number">2</span>
-				</a>
-				<p class="step-comment">Delivery Info</p>
-			</div>
-			<div class="steps-unit">
-				<a href="#/rfp/new" class="step-item" id="shipment-timing">
-					<span class="step-number">3</span>
-				</a>
-				<p class="step-comment">Shipment Timing</p>
-			</div>
-			<div class="steps-unit">
-				<a href="#/rfp/new" class="step-item" id="shipment-info">
-					<span class="step-number">4</span>
-				</a>
-				<p class="step-comment">Shipment Info</p>
-			</div>
-			<div class="steps-unit last">
-				<a href="#/rfp/new" class="step-item" id="tracking">
-					<span class="step-number">5</span>
-				</a>
-				<p class="step-comment">Tracking</p>
-			</div>
-		</div>		
-	</div>
-
-	<div class="step-content" id="pickup-info-step">
-		<div class="row" id="step-title">
-			<h2>PICKUP INFO</h2>
-		</div>
-		<form ng-submit="submit()" role="form">
-			<div class="form-group">
-				<label for="company" class="control-label my-control-label">Company</label>
-				<input type="text" class="form-control" id="company" placeholder="Company" />
-			</div>
-			<div class="form-group">
-				<label for="address1" class="control-label my-control-label">Address1</label>
-				<input type="text" class="form-control" id="address1" placeholder="Address1" />
-			</div>
-			<div class="form-group">
-				<label for="address2" class="control-label my-control-label">Address2</label>
-				<input type="text" class="form-control" id="address2" placeholder="Address2" />
-			</div>
-			<div class="row">
-				<div class="col-md-3">
-					<div class="form-group required">
-						<label for="city" class="control-label my-control-label required">City*</label>
-						<input type="text" class="form-control required" id="city" placeholder="City" />
-					</div>
-				</div>
-				<div class="col-md-3 my-col-md-offset">
-					<div class="form-group required">
-						<label for="state" class="control-label my-control-label required">State*</label>
-						<input type="text" class="form-control required" id="state" placeholder="State" />
-					</div>
-				</div>
-				<div class="col-md-3 my-col-md-offset">
-					<div class="form-group required">
-						<label for="zip" class="control-label my-control-label required">ZIP*</label>
-						<input type="text" class="form-control required" id="zip" placeholder="ZIP" />
-					</div>
-				</div>
-			</div>
-			<div class="form-group">
-				<label for="contact name" class="control-label my-control-label required">Contact Name</label>
-				<input type="text" class="form-control required" id="contact-name" placeholder="Contact Name" />
-			</div>
-			<div class="form-group">
-				<label for="contact phone" class="control-label my-control-label required">Contact Phone</label>
-				<input type="text" class="form-control required" id="contact-phone" placeholder="Contact Phone" />
-			</div>
-			<div class="form-group">
-				<label for="contact email" class="control-label my-control-label required">Contact Email</label>
-				<input type="text" class="form-control required" id="contact-email" placeholder="Contact Email" />
-			</div>
-			<div class="form-group">
-				<label for="pu number" class="control-label my-control-label required">PU Number</label>
-				<input type="text" class="form-control required" id="pu-number" placeholder="PU Number" />
-			</div>
-			<div class="form-group">
-				<label for="notes for carrier" class="control-label my-control-label required">Notes for Carrier</label>
-				<input type="text" class="form-control required" id="notes-for-carrier" placeholder="Notes for Carrier" />
-			</div>
-			<div class="border-bottom">
-			</div>
-			<div class="form-button">
-				<a href="#/rfp/new" class="action-button" id="btn-previous">PREVIOUS</a>
-				<input type="submit" id="btn-save-draft" class="action-button" value="SAVE DRAFT" />
-				<a href="#/rfp/new" class="action-button" id="btn-previous">NEXT</a>
-			</div>
-		</label>
-	</div>
-	<div class="step-content" id="delivery-info-step">
-	</div>
-	<div class="step-content" id="shipment-timing-step">
-	</div>
-	<div class="step-content" id="shipment-info-step">
-	</div>
-	<div class="step-content" id="tracking-step">
-	</div>
-
+	<form ng-submit="submit()" role="form">
+		<div ng-include="'rfp/new/steps.html'"></div>
+		<div ng-include="'rfp/new/pickup-info.html'"></div>
+		<div ng-include="'rfp/new/delivery-info.html'"></div>
+		<div ng-include="'rfp/new/shipment-timing.html'"></div>
+		<div ng-include="'rfp/new/shipment-info.html'"></div>
+		<div ng-include="'rfp/new/tracking.html'"></div>
+		<div class="border-bottom">
+    </div>
+		<div class="form-button">
+      <a href="#/rfp/new" class="action-button" id="btn-previous">PREVIOUS</a>
+      <input type="submit" id="btn-save-draft" class="action-button" value="SAVE DRAFT" />
+      <a href="#/rfp/new" class="action-button" id="btn-next">NEXT</a>
+    </div>
+	</form>	
 </div>
-<script type="text/javascript">
-$(function(){
-	$('.step-item').bind('click', function() {
-		$('.steps-unit.active').removeClass('active');
-		$(this).parent().addClass('active');
-		var id = $(this).attr('id');
-		if (id === 'pickup-info') {
-
-		} else if (id === 'delivery-info') {
-
-		} else if (id === 'shipment-timing') {
-
-		} else if (id === 'shipment-info') {
-
-		} else if (id === 'tracking') {
-
-		}
-	});
-});
-</script>
 
