@@ -1,6 +1,6 @@
 'use strict';
 
-var rfpApp = angular.module('myApp.rfp', ['ngRoute']);
+var rfpApp = angular.module('myApp.rfp', ['ngRoute', 'ui.bootstrap']);
 
 rfpApp.config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/rfp/dashboard', {
@@ -16,7 +16,7 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
   $http.get('data/confirmed.json').success(function(data){
     $scope.confirmed_data = data;
   });
-  $scope.current_user = 'Matt';
+  $scope.current_user = 'Matt'; 
 
   $scope.submit = function() {
     
@@ -43,7 +43,7 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
       } else if (id === 'delivery-info') {
         $('#btn-previous').show();
         $('#btn-next').show();
-        
+
         $('#pickup-info-step').hide();
         $('#delivery-info-step').show();
         $('#shipment-info-step').hide();
@@ -78,5 +78,84 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
         $('#tracking-step').show();
       }
     });
-  });  
+  
+  /*
+    ****************************************
+    Date Picker
+    ****************************************
+  */
+  $scope.today = function() {
+    $scope.dt = new Date();
+  };
+
+  $scope.today();
+
+  /*$scope.clear = function () {
+    $scope.dt = null;    
+  };
+
+  Disable weekend selection
+  $scope.disabled = function(date, mode) {
+    return ( mode === 'day' && ( date.getDay() === 0 || date.getDay() === 6 ) );
+  };*/
+
+  $scope.toggleMin = function() {
+    $scope.minDate = $scope.minDate ? null : new Date();
+  };
+  $scope.toggleMin();
+  $scope.maxDate = new Date(2020, 5, 22);
+
+  $scope.open = function($event) {
+    $scope.status.opened = true;
+  };
+
+  /*$scope.setDate = function(year, month, day) {
+    $scope.dt = new Date(year, month, day);
+  };*/
+
+  $scope.dateOptions = {
+    formatYear: 'yy',
+    startingDay: 1
+  };
+
+  $scope.formats = ['dd-MMMM-yyyy', 'yyyy/MM/dd', 'dd.MM.yyyy', 'shortDate'];
+  $scope.format = $scope.formats[1];
+
+  $scope.status = {
+    opened: false
+  };
+
+  /*var tomorrow = new Date();
+  tomorrow.setDate(tomorrow.getDate() + 1);
+  var afterTomorrow = new Date();
+  afterTomorrow.setDate(tomorrow.getDate() + 2);
+  $scope.events =
+    [
+      {
+        date: tomorrow,
+        status: 'full'
+      },
+      {
+        date: afterTomorrow,
+        status: 'partially'
+      }
+    ];
+
+  $scope.getDayClass = function(date, mode) {
+    if (mode === 'day') {
+      var dayToCheck = new Date(date).setHours(0,0,0,0);
+
+      for (var i=0;i<$scope.events.length;i++){
+        var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
+
+        if (dayToCheck === currentDay) {
+          return $scope.events[i].status;
+        }
+      }
+    }
+    return '';
+  };*/
+
+  $scope.mytime = new Date();
+  });
 }]);
