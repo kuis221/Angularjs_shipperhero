@@ -1,2 +1,67 @@
 <div class="step-content" id="tracking-step">
+  <div class="form-group" id="step-title">
+    <h2>MILESTONES</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="shipment-checkbox"><input type="checkbox" value="">ETA to Shipper</label>
+    </div>
+    <div class="col-md-6">
+      <label class="shipment-checkbox"><input type="checkbox" value="">ETA to Consignee</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="shipment-checkbox"><input type="checkbox" value="">Appt set at Shipper</label>
+    </div>
+    <div class="col-md-6">
+      <label class="shipment-checkbox"><input type="checkbox" value="">Appt set at Consignee</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <label class="shipment-checkbox"><input type="checkbox" value="">Arrived at Shipper</label>
+    </div>
+    <div class="col-md-6">
+      <label class="shipment-checkbox"><input type="checkbox" value="">Arrived at Consignee</label>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-6">
+      <img src="assets/images/rfp/point.png" />
+      <label class="shipment-checkbox">Loaded at Shipper(Default)</label>
+    </div>
+    <div class="col-md-6">
+      <img src="assets/images/rfp/point.png" />
+      <label class="shipment-checkbox">Unloaded at Consignee(Default)</label>
+    </div>
+  </div>
+  <div class="form-group" id="step-title">
+    <h2>LOCATION & TIMING</h2>
+  </div>
+  <div class="row">
+    <div class="col-md-7">
+      <label for="require daily location updates?" class="control-label shipment-checkbox">Require Daily Location Updates?</label>
+    </div>
+    <div class="col-md-5 row">
+      <div class="col-md-6 text-right">
+        <label class="shipment-radio"><input type="radio" name="daily_location" value="yes" id="daily-location-yes">Yes</label>
+      </div>
+      <div class="col-md-6 text-right">
+        <label class="shipment-radio"><input type="radio" name="daily_location" value="no" id="daily-location-no">No</label>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-md-5 vcenter">
+      <label for="daily updates due by" class="control-label my-control-label">Daily Updates Due by:</label>
+    </div>
+    <div class="col-md-5 col-md-offset-2 text-right">
+      <uib-timepicker ng-model="consignee-hour-from" show-meridian="ismeridian"></uib-timepicker>      
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="notes for carrier" class="control-label my-control-label">Notes for Carrier</label>
+    <textarea class="form-control" id="tracking-notes-for-carrier" placeholder="Notes for Carrier" />
+  </div>
 </div>
