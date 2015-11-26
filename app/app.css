@@ -430,10 +430,88 @@
   color: #1f66c2;
 }
 
+#shipper-from {
+  position: relative;
+}
+
+#shipper-to {
+  position: relative;
+}
+
+.shipper-hour-up {
+  position: absolute;
+  top: 0;
+  right: 0;
+  cursor: pointer;
+  padding: 0px 2px;
+  border: none !important;
+}
+
+.shipper-hour-up>img {
+  width: 10px;
+}
+
+.shipper-hour-up>img:focus, .shipper-hour-up:focus {
+  border: none !important;
+  outline: none;
+}
+
+.shipper-hour-down {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  cursor: pointer;
+  padding: 0px 2px;
+}
+
+.shipper-hour-down>img {
+  width: 10px;
+}
+
+.shipper-hour-down>img:focus, .shipper-hour-down:focus {
+  border: none !important;
+  outline: none;
+}
+
+.shipper-time-section {
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px 4px;
+  display: inline-block !important;
+}
+
+.shipper-time-section>td {
+  padding: 0 6px;
+}
+
+.hour-center {
+  padding: 50% 0;
+}
+
+.hour-right {
+  padding: 11% 0;
+}
+
+#shipment-timing-step span, #shipment-timing-step input, #shipment-timing-step button {
+  color: #85919f;
+}
+
+.shipment-radio, .shipment-radio>input {
+  color: #1f66c2 !important;
+}
+
+.shipper-timing-col-md-offset-4 {
+  margin-left: 26.333333% !important;
+}
+
+.vcenter {
+  line-height: 52px;
+}
+
 @media (min-width: 992px) {
   .my-col-md-offset {
     margin-left: 12.5% !important;
-  }  
+  }
 }
 
 @media screen and (max-width: 991px) {

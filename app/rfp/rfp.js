@@ -85,7 +85,8 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
     ****************************************
   */
   $scope.today = function() {
-    $scope.dt = new Date();
+    $scope.pickup_date = new Date();
+    $scope.delivery_date = new Date();
   };
 
   $scope.today();
@@ -105,8 +106,12 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
   $scope.toggleMin();
   $scope.maxDate = new Date(2020, 5, 22);
 
-  $scope.open = function($event) {
-    $scope.status.opened = true;
+  $scope.pickupdate_open = function($event) {
+    $scope.status.pickupdate_opened = true;
+  };
+
+  $scope.deliverydate_open = function($event) {
+    $scope.status.deliverydate_opened = true;
   };
 
   /*$scope.setDate = function(year, month, day) {
@@ -122,10 +127,11 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
   $scope.format = $scope.formats[1];
 
   $scope.status = {
-    opened: false
+    pickupdate_opened: false,
+    deliverydate_opened: false
   };
 
-  /*var tomorrow = new Date();
+  /* var tomorrow = new Date();
   tomorrow.setDate(tomorrow.getDate() + 1);
   var afterTomorrow = new Date();
   afterTomorrow.setDate(tomorrow.getDate() + 2);
@@ -156,6 +162,11 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
     return '';
   };*/
 
-  $scope.mytime = new Date();
+  // $scope.mytime = new Date();
+  $scope.ismeridian = true;
+
+  $scope.toggleMode = function() {
+    $scope.ismeridian = ! $scope.ismeridian;
+  };
   });
 }]);
