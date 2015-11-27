@@ -518,6 +518,18 @@
   font-size: 12px;
 }
 
+.info-item-title {
+  color: #4a84ce;
+}
+
+.info-item-desc {
+  color: #565d64;
+}
+
+.pickup-section>h3, .delivery-section>h3, .shipment-section>h3, .shipment-timing-section>h3, .job-section>h3 {
+  color: #4a84ce;
+}
+
 @media (min-width: 992px) {
   .my-col-md-offset {
     margin-left: 12.5% !important;
