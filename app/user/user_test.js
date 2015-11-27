@@ -1,8 +1,8 @@
 'use strict';
 
-describe('shipperApp.user module', function() {
+describe('myApp.user module', function() {
 
-  beforeEach(module('shipperApp.user'));
+  beforeEach(module('myApp.user'));
 
   describe('user controller', function(){
 

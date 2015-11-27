@@ -5,6 +5,7 @@ var myApp = angular.module('myApp', [
   'ngRoute',
   'myApp.rfp',
   'myApp.user',
+  'myApp.shipments',
   'myApp.version'
 ]);
 

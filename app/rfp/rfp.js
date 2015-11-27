@@ -13,9 +13,10 @@ rfpApp.config(['$routeProvider', function ($routeProvider) {
 }]);
 
 rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
-  $http.get('data/confirmed.json').success(function(data){
+  $http.get('data/rfp/confirmed.json').success(function(data){
     $scope.confirmed_data = data;
   });
+  
   $scope.current_user = 'Matt'; 
 
   $scope.submit = function() {

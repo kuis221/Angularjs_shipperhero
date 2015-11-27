@@ -1,0 +1,32 @@
+[
+  {
+    "nameRef": "Fox-1502",
+    "pickupCityState": "White Plains, NY",
+    "deliveryCityState": "White Plains, NY",
+    "carrier": "Test Carrige & Co.",
+    "cost": "$1500",
+    "pickupAct": "Test Data",
+    "deliveryProj": "Test Data",
+    "rating": 5
+  },
+  {
+    "nameRef": "Fox-1502",
+    "pickupCityState": "White Plains, NY",
+    "deliveryCityState": "White Plains, NY",
+    "carrier": "Test Carrige & Co.",
+    "cost": "$1500",
+    "pickupAct": "Test Data",
+    "deliveryProj": "Test Data",
+    "rating": 5
+  },
+  {
+    "nameRef": "Fox-1502",
+    "pickupCityState": "White Plains, NY",
+    "deliveryCityState": "White Plains, NY",
+    "carrier": "Test Carrige & Co.",
+    "cost": "$1500",
+    "pickupAct": "Test Data",
+    "deliveryProj": "Test Data",
+    "rating": 5
+  }
+]

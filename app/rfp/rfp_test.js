@@ -1,8 +1,8 @@
 'use strict';
 
-describe('shipperApp.rfp module', function() {
+describe('myApp.rfp module', function() {
 
-  beforeEach(module('shipperApp.rfp'));
+  beforeEach(module('myApp.rfp'));
 
   describe('rfp controller', function(){
 
