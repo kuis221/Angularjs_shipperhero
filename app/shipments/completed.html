@@ -1,7 +1,7 @@
 <div class="rfp-section">
   <div class="rfp-header">
     <div class="rfp-header-left">
-      <span>COMPLETED</span>
+      <span>COMPLETED SHIPMENTS</span>
     </div>
     <div class="rfp-header-right">
       <span>VIEW ALL</span>
@@ -31,7 +31,9 @@
           <td>{{data.cost}}</td>
           <td>{{data.pickupAct}}</td>
           <td>{{data.deliveryProj}}</td>
-          <td>{{data.rating}}</td>
+          <td>
+            <input type="number" value="5" class="rating">
+          </td>
           <td>
             <a href="#" class="action-button">View</a>
             <a href="#" class="action-button">Contact</a>
@@ -39,5 +41,126 @@
         </tr>
       </tbody>
     </table>
+    <div class="col-md-12">
+      <div class="col-md-4 row">
+        <div class="col-md-12">
+          <h3>Pickup Information</h3>
+          <div class="info-item">
+            <span class="info-item-title">Company:</span>
+            <span class="info-item-desc">Lorem Ipsum, Inc.</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Contact Name:</span>
+            <span class="info-item-desc">John Appleseed</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Contact Phone:</span>
+            <span class="info-item-desc">123-456-7890</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Contact Email:</span>
+            <span class="info-item-desc">anyone@loremipsum.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Address 1:</span>
+            <span class="info-item-desc">123 Main Street</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Address 2:</span>
+            <span class="info-item-desc">Suite 356</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">City,State,ZIP:</span>
+            <span class="info-item-desc">Los Angeles, CA, 90210</span>
+          </div>
+        </div>
+        <div class="col-md-12">
+          <h3>Delivery Information</h3>
+          <div class="info-item">
+            <span class="info-item-title">Company:</span>
+            <span class="info-item-desc">Dolor Sit Maet, Inc.</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Contact Name:</span>
+            <span class="info-item-desc">Jane Appleseed</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Contact Phone:</span>
+            <span class="info-item-desc">123-456-7890</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Contact Email:</span>
+            <span class="info-item-desc">anyone@loremipsum.com</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Address1:</span>
+            <span class="info-item-desc">123 Main Street</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">Address2:</span>
+            <span class="info-item-desc">Suite 356</span>
+          </div>
+          <div class="info-item">
+            <span class="info-item-title">City,State,ZIP:</span>
+            <span class="info-item-desc">Los Angeles, CA, 90210</span>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4">
+        <h3>Shipment Information</h3>
+        <div class="info-item">
+          <span class="info-item-title"># of Cartons:</span>
+          <span class="info-item-desc">20</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Cubic Feet:</span>
+          <span class="info-item-desc">123</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Stackable:</span>
+          <span class="info-item-desc">Yes</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Unit Count:</span>
+          <span class="info-item-desc">123</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Skid Count:</span>
+          <span class="info-item-desc">234</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Skid Dimentions(In):</span>
+          <span class="info-item-desc">48"X48"X48"</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Weight:</span>
+          <span class="info-item-desc">12</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Commodity:</span>
+          <span class="info-item-desc">Excellent Stuff</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Hazmat:</span>
+          <span class="info-item-desc">No</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Value:</span>
+          <span class="info-item-desc">$456</span>
+        </div>
+        <div class="info-item">
+          <span class="info-item-title">Notes For Carrier:</span>
+          <span class="info-item-desc">Lorem ipsum dolor sit amet, consectetuer adlpiscing elit, Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes.</span>
+        </div>
+      </div>
+      <div class="col-md-4">
+        
+      </div>
+    </div>
   </div>
 </div>
+<script type="text/javascript">
+$(function() {
+  $("*[class^='rating']").rating({min:1, max:5, step:0.5, size:'xs', showCaption:false, showClear:false});
+});
+</script>

@@ -9,16 +9,12 @@ shipmentsApp.config(['$routeProvider', function ($routeProvider) {
   });
 }]);
 
-shipmentsApp.controller('ShipmentsCtrl', ['$scope', '$http', function ($scope, $http) {
+shipmentsApp.controller('ShipmentsCtrl', ['$scope', '$http', function ($scope, $http) {  
   $http.get('data/shipments/completed.json').success(function(data){
     $scope.completed_data = data;
   });
   
   $scope.submit = function() {
     
-  };
-
-  $scope.$on('$includeContentLoaded', function (event, url) {    
-    
-  });
+  };  
 }]);

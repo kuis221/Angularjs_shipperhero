@@ -514,6 +514,10 @@
   color: #717171;
 }
 
+.rating-xs {
+  font-size: 12px;
+}
+
 @media (min-width: 992px) {
   .my-col-md-offset {
     margin-left: 12.5% !important;

@@ -16,14 +16,14 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
   $http.get('data/rfp/confirmed.json').success(function(data){
     $scope.confirmed_data = data;
   });
-  
+
   $scope.current_user = 'Matt'; 
 
   $scope.submit = function() {
     
-  };
+  };  
 
-  $scope.$on('$includeContentLoaded', function (event, url) {    
+  $scope.$on('$includeContentLoaded', function (event, url) {      
     $('#pickup-info').parent().addClass('active');
     $('#btn-previous').hide();
     $('#btn-next').show();
