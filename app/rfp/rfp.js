@@ -9,6 +9,9 @@ rfpApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/rfp/new', {
     templateUrl: 'rfp/new.html',
     controller: 'RfpCtrl'
+  }).when('/rfp/init', {
+    templateUrl: 'rfp/init.html',
+    controller: 'RfpCtrl'
   });
 }]);
 
