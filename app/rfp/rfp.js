@@ -12,6 +12,9 @@ rfpApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/rfp/init', {
     templateUrl: 'rfp/init.html',
     controller: 'RfpCtrl'
+  }).when('/rfp/myrfp', {
+    templateUrl: 'rfp/myrfp.html',
+    controller: 'RfpCtrl'
   });
 }]);
 
@@ -20,13 +23,25 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.confirmed_data = data;
   });
 
+  $http.get('data/rfp/myrfp.json').success(function(data){
+    $scope.myrfp_data = data;
+  });
+
   $scope.current_user = 'Matt'; 
 
   $scope.submit = function() {
     
-  };  
+  };
 
-  $scope.$on('$includeContentLoaded', function (event, url) {      
+  $scope.$on('$includeContentLoaded', function (event, url) {
+    $('.myrfp-pause').on('click', function() {    
+      $('#myrfp-item').show();
+    });
+
+    $('#continue-btn').on('click', function() {
+      $('#pauseDlg').modal('toggle');
+    });
+
     $('#pickup-info').parent().addClass('active');
     $('#btn-previous').hide();
     $('#btn-next').show();
@@ -154,7 +169,7 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
   $scope.getDayClass = function(date, mode) {
     if (mode === 'day') {
       var dayToCheck = new Date(date).setHours(0,0,0,0);
-
+e
       for (var i=0;i<$scope.events.length;i++){
         var currentDay = new Date($scope.events[i].date).setHours(0,0,0,0);
 

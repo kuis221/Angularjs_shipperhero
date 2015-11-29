@@ -1,0 +1,26 @@
+[
+  {
+    "nameRef": "Fox-1502",
+    "pickupCityState": "White Plains, NY",
+    "deliveryCityState": "White Plains, NY",
+    "bidsCount": 1092,
+    "bidLevel": "High",
+    "closeDate": "11/9/2015"    
+  },
+  {
+    "nameRef": "Fox-1502",
+    "pickupCityState": "White Plains, NY",
+    "deliveryCityState": "White Plains, NY",
+    "bidsCount": 231,
+    "bidLevel": "Low",
+    "closeDate": "11/9/2015"    
+  },
+  {
+    "nameRef": "Fox-1502",
+    "pickupCityState": "White Plains, NY",
+    "deliveryCityState": "White Plains, NY",
+    "bidsCount": 231,
+    "bidLevel": "Average",
+    "closeDate": "11/9/2015"
+  }
+]

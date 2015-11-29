@@ -1,0 +1,47 @@
+<div ng-include="'partials/description.html'"></div>
+<div ng-include="'partials/messages.html'"></div>
+<div class="rfp-section">
+  <div class="rfp-header">
+    <div class="rfp-header-middle">
+      <span>MY RFPS</span>
+    </div>
+  </div>
+  <div class="rfp-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Name/Ref#</th>
+          <th>Pickup City/State</th>
+          <th>Delivery City/State</th>
+          <th># of Bids</th>
+          <th>High/Low/Average Bid</th>
+          <th>Close Date</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody ng-repeat="data in myrfp_data">
+        <tr>
+          <td>{{data.nameRef}}</td>
+          <td>{{data.pickupCityState}}</td>
+          <td>{{data.deliveryCityState}}</td>
+          <td>{{data.bidsCount}}</td>
+          <td>{{data.bidLevel}}</td>
+          <td>{{data.closeDate}}</td>
+          <td>
+            <a href="" class="action-button myrfp-pause" data-target="#pauseDlg" data-toggle="modal">PAUSE</a>
+            <a href="" class="action-button myrfp-view"><label>VIEW</label><span class="caret my-caret2"></span></a>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div ng-include="'rfp/dialog.html'" style="display: inline-block"></div>
+    <div ng-include="'rfp/myrfp_item.html'" style="display: inline-block"></div>
+  </div>
+</div>
+<script type="text/javascript">
+$(function() {
+  $('#continue-btn').on('click', function() {
+    $('#pauseDlg').modal('toggle');
+  });
+});
+</script>
