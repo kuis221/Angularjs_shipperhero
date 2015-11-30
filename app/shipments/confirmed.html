@@ -1,3 +1,5 @@
+<div ng-include="'partials/description.html'"></div>
+<div ng-include="'partials/messages.html'"></div>
 <div class="rfp-section">
   <div class="rfp-header">
     <div class="rfp-header-left">
@@ -15,25 +17,17 @@
           <th>Pickup City/State</th>
           <th>Delivery City/State</th>
           <th>Carrier</th>
-          <th>Cost</th>
-          <th>Pickup (Act)</th>
-          <th>Delivery (Proj)</th>
-          <th>Rating</th>
+          <th>Price</th>
           <th>Action</th>
         </tr>
       </thead>
-      <tbody ng-repeat="data in completed_data">
+      <tbody ng-repeat="data in confirmed_data">
         <tr>
           <td>{{data.nameRef}}</td>
           <td>{{data.pickupCityState}}</td>
           <td>{{data.deliveryCityState}}</td>
           <td>{{data.carrier}}</td>
-          <td>{{data.cost}}</td>
-          <td>{{data.pickupAct}}</td>
-          <td>{{data.deliveryProj}}</td>
-          <td>
-            <input type="number" value="5" class="rating">
-          </td>
+          <td>{{data.price}}</td>
           <td>
             <a href="" class="action-button">Contact</a>
             <a href="" class="action-button view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>            
@@ -42,11 +36,6 @@
       </tbody>
     </table>
     <div ng-include="'shipments/dialog.html'" style="display: inline-block"></div>
-    <div ng-include="'shipments/completed_shipment_item.html'" style="display: inline-block"></div>
+    <div ng-include="'shipments/completed_shipment_item.html'" style="display: inline-block"></div> 
   </div>
 </div>
-<script type="text/javascript">
-$(function() {
-  $("*[class^='rating']").rating({min:1, max:5, step:0.5, size:'xs', showCaption:false, showClear:false});
-});
-</script>

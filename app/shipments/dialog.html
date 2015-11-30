@@ -1,0 +1,78 @@
+<div class="modal fade" id="cancelDlg" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <p>Are you sure you want to proceed?</p>
+        <p>This will delete the load and notify the carrier.</p>
+      </div>
+      <div class="modal-footer my-modal-footer">
+        <a href="" class="action-button">GO BACK</a>
+        <a href="" class="action-button" id="saveas-draft-button" data-target="#saveAsDraftDlg" data-toggle="modal">SAVE AS DRAFT</a>
+        <a href="" class="action-button" id="cancel-continue-button" data-target="#shipments-continueDlg" data-toggle="modal">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="shipments-continueDlg" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <p>Are you sure you want to proceed?</p>
+        <p>This will cancel the shipment. Carrier will be notified and all load information will be deleted.</p>
+      </div>          
+      <div class="modal-footer my-modal-footer">
+        <a href="" class="action-button">GO BACK</a>        
+        <a href="" class="action-button" id="continue-continue-button" data-target="#" data-toggle="modal">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="saveAsDraftDlg" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <p>Are you sure you want to proceed?</p>
+        <p>This will cancel shipment and notify the carrier.</p>
+        <p>It will also save the shipment in draft.</p>
+      </div>
+      <div class="modal-footer my-modal-footer">
+        <a href="" class="action-button">GO BACK</a>        
+        <a href="" class="action-button" id="saveas-continue-button" data-target="#saveChangesConfirmDlg" data-toggle="modal">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="saveChangesConfirmDlg" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <p>Are you sure you want to proceed?</p>
+        <p>This will revert the load to pending and carrier will have to approve changes.</p>        
+      </div>
+      <div class="modal-footer my-modal-footer">
+        <a href="" class="action-button">GO BACK</a>
+        <a href="" class="action-button" id="changesconfirm-continue-button" data-target="#" data-toggle="modal">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>

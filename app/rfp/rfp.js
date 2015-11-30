@@ -34,12 +34,16 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
   };
 
   $scope.$on('$includeContentLoaded', function (event, url) {
-    $('.myrfp-pause').on('click', function() {    
+    $('.accept-button').on('click', function() {    
       $('#myrfp-item').show();
     });
 
-    $('#continue-btn').on('click', function() {
+    $('#pause-continue-button').on('click', function() {
       $('#pauseDlg').modal('toggle');
+    });
+
+    $('#accept-continue-button').on('click', function() {
+      $('#acceptDlg').modal('toggle');      
     });
 
     $('#pickup-info').parent().addClass('active');

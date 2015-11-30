@@ -68,15 +68,15 @@ body {
   margin-top: 4px;
 }
 
-#myrfp-pause {
+.pause-button {
 
 }
 
-#myrfp-view {
+.view-button {
 
 }
 
-#myrfp-view>label {
+.view-button>label {
   margin-right: 10px;
   margin-bottom: 0;
 }
@@ -562,7 +562,9 @@ body {
 }
 
 .info-item-title {
-  color: #4a84ce;
+  color: #4a84ce;  
+  margin-bottom: 0;
+  text-align: right;
 }
 
 .info-item-desc {

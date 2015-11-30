@@ -8,17 +8,36 @@
       </div>
       <div class="modal-body my-modal-body">
         <p>Are you sure you want to proceed?</p>
+        <p>This will pause the progress and notify the carrier.</p>
+      </div>
+      <div class="modal-footer my-modal-footer">            
+        <a href="" class="action-button">CANCEL</a>
+        <a href="" class="action-button" id="pause-continue-button" data-target="#continueDlg" data-toggle="modal">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="acceptDlg" role="dialog">
+  <div class="modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <p>Are you sure you want to proceed?</p>
         <p>This will accept the bid on your RFP and notify the carrier.</p>
       </div>
       <div class="modal-footer my-modal-footer">            
         <a href="" class="action-button">CANCEL</a>
-        <a href="" class="action-button" data-target="#continueDlg" data-toggle="modal" id="continue-btn">CONTINUE</a>
+        <a href="" class="action-button" id="accept-continue-button" data-target="#continueDlg" data-toggle="modal">CONTINUE</a>
       </div>
     </div>
   </div>
 </div>
 <div class="modal fade" id="continueDlg" role="dialog">
-  <div class="modal-dialog">      
+  <div class="modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -43,4 +62,264 @@
       </div>
     </div>
   </div>
-</div> 
+</div>
+<div class="modal fade" id="myrfp-edit-dlg" role="dialog">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+      </div>
+      <div class="modal-body my-modal-body">
+        <div class="col-md-12" id="myrfp-item">
+          <div class="row">
+            <div class="col-md-4">
+              <div class="pickup-section">
+                <h3>Pickup Information</h3>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Company:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Lorem Ipsum, Inc." />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Contact Name:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="John Appleseed" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Contact Phone:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="123-456-7890"/>
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Contact Email:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="anyone@loremipsum.com" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Address 1:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="123 Main Street" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Address 2:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Suite 356" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">City,State,ZIP:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Los Angeles, CA, 90210" />
+                  </div>
+                </div>
+              </div>
+              <div class="delivery-section">
+                <h3>Delivery Information</h3>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Company:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Dolor Sit Maet, Inc." />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Contact Name:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Jane Appleseed" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Contact Phone:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="123-456-7890" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Contact Email:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="anyone@loremipsum.com" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Address1:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="123 Main Street" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Address2:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Suite 356" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">City,State,ZIP:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Los Angeles, CA, 90210" />
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 shipment-section">
+              <h3>Shipment Information</h3>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px"># of Cartons:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="20" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Cubic Feet:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="123" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Stackable:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="Yes" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Unit Count:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="123" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Skid Count:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="234" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Skid Dimentions(In):</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value='48\"X48\"X48\"' />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Weight:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="12" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Commodity:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="Excellent Stuff" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Hazmat:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="No" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Value:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="$456" />
+                </div>
+              </div>
+              <div class="row">
+                <span class="info-item-title col-md-6" style="padding-top: 7px">Notes For Carrier:</span>
+                <div class="col-md-6">
+                  <input type="text" class="form-control" value="Lorem ipsum dolor sit amet, consectetuer adlpiscing elit, Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes." />
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4">
+              <div class="shipment-timing-section">
+                <h3>Shipment Timing</h3>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Pickup Date/Time:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="9/7/2015 - 11/7/2015" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Delivery Date/Time:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="9/7/2015 - 11/7/2015" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Prefered frequency of tracking updates:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Upon pickup and delivery" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">RFPs Close Date:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="11/7/2015" />
+                  </div>
+                </div>
+              </div>
+              <div class="job-section">
+                <h3>Job Information</h3>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">PU Number:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="12345" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">DEL Number:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="67890" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">PO Number:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="12345" />
+                  </div>
+                </div>
+                <div class="row">
+                  <span class="info-item-title col-md-6" style="padding-top: 7px">Internal Notes:</span>
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" value="Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient" />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" style="margin-top: 10px">
+            <div class="col-md-6 col-md-offset-4">
+              <a href="" class="action-button text-center">DISCARD</a>
+              <a href="" class="action-button text-center">SAVE DRAFT</a>
+              <a href="" class="action-button text-center">POST RFP</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer my-modal-footer">
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="deleteDlg" role="dialog">
+  <div class="modal-dialog">      
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <p>Are you sure you want to proceed?</p>
+        <p>This will accept the bid on your RFP and notify the carrier.</p>
+      </div>
+      <div class="modal-footer my-modal-footer">            
+        <a href="" class="action-button">CANCEL</a>
+        <a href="" class="action-button" data-target="#continueDlg" data-toggle="modal" id="continue-btn">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>
