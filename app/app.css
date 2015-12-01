@@ -77,8 +77,13 @@ body {
 }
 
 .view-button>label {
-  margin-right: 10px;
+  margin-right: 5px;
   margin-bottom: 0;
+  cursor: pointer;
+}
+
+.action-button>label {
+  cursor: pointer;
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -323,6 +328,7 @@ body {
   font-size: 12px;
   text-decoration: none !important;  
   line-height: normal !important;
+  margin-top: 10px;
 }
 
 .action-button:hover {
@@ -591,7 +597,7 @@ body {
 }
 
 #myrfp-item {
-  
+  display: none;
 }
 
 #test-data {
@@ -611,7 +617,7 @@ body {
 }
 
 .my-modal-header {
-  border: none;
+  border: none;  
 }
 
 .my-modal-body {
@@ -620,7 +626,23 @@ body {
 
 .my-modal-footer {
   border: none;
-  text-align: center;
+  text-align: center;  
+}
+
+#completed-item {
+  display: none;
+}
+
+#confirmed-item {
+  display: none;
+}
+
+#delivered-item {
+  display: none;
+}
+
+.my-modal-dialog {
+  width: 439px;
 }
 
 @media (min-width: 992px) {

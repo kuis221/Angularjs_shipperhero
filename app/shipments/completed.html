@@ -22,7 +22,7 @@
           <th>Action</th>
         </tr>
       </thead>
-      <tbody ng-repeat="data in completed_data">
+      <tbody ng-repeat="data in completed_data track by $index">
         <tr>
           <td>{{data.nameRef}}</td>
           <td>{{data.pickupCityState}}</td>
@@ -35,14 +35,16 @@
             <input type="number" value="5" class="rating">
           </td>
           <td>
-            <a href="" class="action-button">Contact</a>
-            <a href="" class="action-button view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>            
+            <a href="" class="action-button">CONTACT</a>
+            <a href="" class="action-button completed-view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>
           </td>
         </tr>
       </tbody>
     </table>
     <div ng-include="'shipments/dialog.html'" style="display: inline-block"></div>
-    <div ng-include="'shipments/completed_shipment_item.html'" style="display: inline-block"></div>
+    <div  id="completed-item">
+      <div ng-include="'shipments/shipment_item.html'" style="display: inline-block"></div>
+    </div>
   </div>
 </div>
 <script type="text/javascript">

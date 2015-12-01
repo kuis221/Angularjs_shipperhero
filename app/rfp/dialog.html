@@ -1,5 +1,5 @@
 <div class="modal fade" id="pauseDlg" role="dialog">
-  <div class="modal-dialog">      
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -12,13 +12,13 @@
       </div>
       <div class="modal-footer my-modal-footer">            
         <a href="" class="action-button">CANCEL</a>
-        <a href="" class="action-button" id="pause-continue-button" data-target="#continueDlg" data-toggle="modal">CONTINUE</a>
+        <a href="" class="action-button" id="pause-continue-button" data-target="#rfp-continueDlg" data-toggle="modal">CONTINUE</a>
       </div>
     </div>
   </div>
 </div>
 <div class="modal fade" id="acceptDlg" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -29,25 +29,25 @@
         <p>Are you sure you want to proceed?</p>
         <p>This will accept the bid on your RFP and notify the carrier.</p>
       </div>
-      <div class="modal-footer my-modal-footer">            
+      <div class="modal-footer my-modal-footer">
         <a href="" class="action-button">CANCEL</a>
-        <a href="" class="action-button" id="accept-continue-button" data-target="#continueDlg" data-toggle="modal">CONTINUE</a>
+        <a href="" class="action-button" id="accept-continue-button" data-target="#rfp-continueDlg" data-toggle="modal">CONTINUE</a>
       </div>
     </div>
   </div>
 </div>
-<div class="modal fade" id="continueDlg" role="dialog">
-  <div class="modal-dialog">
+<div class="modal fade" id="rfp-continueDlg" role="dialog">
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
         <button type="button" class="close" data-dismiss="modal">&times;</button>            
       </div>
       <div class="modal-body my-modal-body">
-        <div class="col-md-2 col-md-offset-1">
+        <div class="col-md-2">
           <img src="assets/images/rfp/user.png" alt="user" />
         </div>
-        <div class="col-md-8">
+        <div class="col-md-10">
           <div class="col-md-6">
             <p>John Appleseed</p>
             <p>Lorem lpsum, Inc.</p>
@@ -70,7 +70,7 @@
         <button type="button" class="close" data-dismiss="modal">&times;</button>
       </div>
       <div class="modal-body my-modal-body">
-        <div class="col-md-12" id="myrfp-item">
+        <div class="col-md-12">
           <div class="row">
             <div class="col-md-4">
               <div class="pickup-section">
@@ -300,25 +300,6 @@
         </div>
       </div>
       <div class="modal-footer my-modal-footer">
-      </div>
-    </div>
-  </div>
-</div>
-<div class="modal fade" id="deleteDlg" role="dialog">
-  <div class="modal-dialog">      
-    <!-- Modal content-->
-    <div class="modal-content">
-      <div class="modal-header my-modal-header">
-        <button type="button" class="close" data-dismiss="modal">&times;</button>
-        <h4 class="modal-title confirm-title">CONFIRMATION</h4>
-      </div>
-      <div class="modal-body my-modal-body">
-        <p>Are you sure you want to proceed?</p>
-        <p>This will accept the bid on your RFP and notify the carrier.</p>
-      </div>
-      <div class="modal-footer my-modal-footer">            
-        <a href="" class="action-button">CANCEL</a>
-        <a href="" class="action-button" data-target="#continueDlg" data-toggle="modal" id="continue-btn">CONTINUE</a>
       </div>
     </div>
   </div>

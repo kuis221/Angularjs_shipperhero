@@ -27,23 +27,29 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
     $scope.myrfp_data = data;
   });
 
-  $scope.current_user = 'Matt'; 
+  $scope.current_user = 'Matt';
 
   $scope.submit = function() {
     
   };
 
   $scope.$on('$includeContentLoaded', function (event, url) {
-    $('.accept-button').on('click', function() {    
-      $('#myrfp-item').show();
+    $('.accept-button').on('click', function() {
+      
     });
 
     $('#pause-continue-button').on('click', function() {
       $('#pauseDlg').modal('toggle');
+      $('#pauseDlg').close();
     });
 
     $('#accept-continue-button').on('click', function() {
-      $('#acceptDlg').modal('toggle');      
+      $('#acceptDlg').modal('toggle');
+      $('#acceptDlg').close();
+    });
+
+    $('.view-button').on('click', function() {
+      $('#myrfp-item').show();
     });
 
     $('#pickup-info').parent().addClass('active');

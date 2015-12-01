@@ -1,5 +1,5 @@
 <div class="modal fade" id="cancelDlg" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -19,7 +19,7 @@
   </div>
 </div>
 <div class="modal fade" id="shipments-continueDlg" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -38,7 +38,7 @@
   </div>
 </div>
 <div class="modal fade" id="saveAsDraftDlg" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -58,7 +58,7 @@
   </div>
 </div>
 <div class="modal fade" id="saveChangesConfirmDlg" role="dialog">
-  <div class="modal-dialog">
+  <div class="modal-dialog my-modal-dialog">
     <!-- Modal content-->
     <div class="modal-content">
       <div class="modal-header my-modal-header">
@@ -72,6 +72,78 @@
       <div class="modal-footer my-modal-footer">
         <a href="" class="action-button">GO BACK</a>
         <a href="" class="action-button" id="changesconfirm-continue-button" data-target="#" data-toggle="modal">CONTINUE</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="rateDlg" role="dialog">
+  <div class="modal-dialog my-modal-dialog">
+    <!-- Modal content-->
+    <div class="modal-content">
+      <div class="modal-header my-modal-header">
+        <button type="button" class="close" data-dismiss="modal">&times;</button>
+        <h4 class="modal-title confirm-title">RATE THE SHIPMENT</h4>
+      </div>
+      <div class="modal-body my-modal-body">
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <label class="control-label">Pickup on time</label>
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="Yes" name="pickup_on_time" />Yes
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="No" name="pickup_on_time" />No
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <label class="control-label">Delivery on time</label>
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="Yes" name="delivery_on_time" />Yes
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="No" name="delivery_on_time" />No
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <label class="control-label">Tracking</label>
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="Yes" name="tracking" />Yes
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="No" name="tracking" />No
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <label class="control-label">Any Claims</label>
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="Yes" name="any_claims" />Yes
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="No" name="any_claims" />No
+          </div>
+        </div>
+        <div class="col-md-12">
+          <div class="col-md-6">
+            <label class="control-label">Would you consider</label>
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="Yes" name="would_you_consider" />Yes
+          </div>
+          <div class="col-md-3">
+            <input type="radio" value="No" name="would_you_consider" />No
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer my-modal-footer" style="margin-top: 10px">
+        <a href="" class="action-button">CANCEL</a>
+        <a href="" class="action-button" id="">SUBMIT</a>
       </div>
     </div>
   </div>

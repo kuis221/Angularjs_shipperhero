@@ -9,6 +9,9 @@ shipmentsApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/shipments/confirmed', {
     templateUrl: 'shipments/confirmed.html',
     controller: 'ShipmentsCtrl'
+  }).when('/shipments/delivered', {
+    templateUrl: 'shipments/delivered.html',
+    controller: 'ShipmentsCtrl'
   });
 }]);
 
@@ -26,24 +29,41 @@ shipmentsApp.controller('ShipmentsCtrl', ['$scope', '$http', function ($scope, $
   };
 
   $scope.$on('$includeContentLoaded', function (event, url) {
+    $('body').on('click', '.confirmed-view-button', function() {      
+      $('#confirmed-item').show();
+    });
+
+    $('body').on('click',  '.completed-view-button', function() {
+      $('#completed-item').show();
+    });
+
+    $('body').on('click', '.delivered-view-button', function() {
+      $('#delivered-item').show();
+    });
+
     $('#cancel-continue-button').on('click', function() {
       $('#cancelDlg').modal('toggle');
+      $('#cancelDlg').close();
     });
 
     $('#continue-continue-button').on('click', function() {
       $('#shipments-continueDlg').modal('toggle');
+      $('#shipments-continueDlg').close();
     });
 
     $('#saveas-draft-button').on('click', function() {
       $('#cancelDlg').modal('toggle');
+      $('#cancelDlg').close();
     });
 
     $('#saveas-continue-button').on('click', function() {
       $('#saveAsDraftDlg').modal('toggle');
+      $('#saveAsDraftDlg').close();
     });
 
     $('#changesconfirm-continue-button').on('click', function() {
       $('#saveChangesConfirmDlg').modal('toggle');
+      $('#saveChangesConfirmDlg').close();
     });
   });
 }]);
