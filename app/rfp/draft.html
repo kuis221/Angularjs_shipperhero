@@ -3,7 +3,7 @@
 <div class="rfp-section">
   <div class="rfp-header">
     <div class="rfp-header-middle">
-      <span>MY RFPS</span>
+      <span>DRAFT RFPS</span>
     </div>
   </div>
   <div class="rfp-body">
@@ -12,30 +12,26 @@
         <tr>
           <th>Name/Ref#</th>
           <th>Pickup City/State</th>
-          <th>Delivery City/State</th>
-          <th># of Bids</th>
-          <th>High/Low/Average Bid</th>
+          <th>Delivery City/State</th>          
           <th>Close Date</th>
-          <th>Action</th>
+          <th>Action</th>          
         </tr>
       </thead>
-      <tbody ng-repeat="data in myrfp_data">
+      <tbody ng-repeat="data in draft_data track by $index">
         <tr>
           <td>{{data.nameRef}}</td>
           <td>{{data.pickupCityState}}</td>
           <td>{{data.deliveryCityState}}</td>
-          <td>{{data.bidsCount}}</td>
-          <td>{{data.bidLevel}}</td>
           <td>{{data.closeDate}}</td>
           <td>
-            <a href="" class="action-button myrfp-pause-button" data-target="#pauseDlg" data-toggle="modal">PAUSE</a>
-            <a href="" class="action-button myrfp-view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>
+            <a href="" class="action-button draft-post-rfp" data-target="#postrfpDlg" data-toggle="modal">POST RFP</a>
+            <a href="" class="action-button draft-view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>
           </td>
         </tr>
       </tbody>
     </table>
     <div ng-include="'rfp/dialog.html'" style="display: inline-block"></div>
-    <div id="myrfp-item">
+    <div id="draft-item">
       <div ng-include="'rfp/rfp_item.html'" style="display: inline-block"></div>
     </div>
   </div>

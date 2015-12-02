@@ -2,11 +2,8 @@
 <div ng-include="'partials/messages.html'"></div>
 <div class="rfp-section">
   <div class="rfp-header">
-    <div class="rfp-header-left">
-      <span>COMPLETED SHIPMENTS</span>
-    </div>
-    <div class="rfp-header-right">
-      <span>VIEW ALL</span>
+    <div class="rfp-header-middle">
+      <span>IN TRANSIT</span>
     </div>
   </div>
   <div class="rfp-body">
@@ -17,26 +14,32 @@
           <th>Pickup City/State</th>
           <th>Delivery City/State</th>
           <th>Carrier</th>
-          <th>Price</th>
+          <th>Cost</th>
+          <th>Close Date</th>
+          <th>Pickup (Act)</th>
+          <th>Delivery (Proj)</th>          
           <th>Action</th>
         </tr>
       </thead>
-      <tbody ng-repeat="data in confirmed_data track by $index">
+      <tbody ng-repeat="data in in_transit_data track by $index">
         <tr>
           <td>{{data.nameRef}}</td>
           <td>{{data.pickupCityState}}</td>
           <td>{{data.deliveryCityState}}</td>
           <td>{{data.carrier}}</td>
-          <td>{{data.price}}</td>
+          <td>{{data.cost}}</td>
+          <td>{{data.closeDate}}</td>
+          <td>{{data.pickupAct}}</td>
+          <td>{{data.deliveryProj}}</td>
           <td>
-            <a href="" class="action-button">CONTACT</a>
-            <a href="" class="action-button confirmed-view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>
+            <a href="" class="action-button in-transit-contact-button" data-target="#inTransitContactDlg" data-toggle="modal">CONTACT</a>
+            <a href="" class="action-button in-transit-view-button"><label>VIEW</label><span class="caret my-caret2"></span></a>
           </td>
         </tr>
       </tbody>
     </table>
     <div ng-include="'shipments/dialog.html'" style="display: inline-block"></div>
-    <div id="confirmed-item">
+    <div id="in-transit-item">
       <div ng-include="'shipments/shipment_item.html'" style="display: inline-block"></div> 
     </div>
   </div>

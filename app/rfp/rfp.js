@@ -15,6 +15,9 @@ rfpApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/rfp/myrfp', {
     templateUrl: 'rfp/myrfp.html',
     controller: 'RfpCtrl'
+  }).when('/rfp/draft', {
+    templateUrl: 'rfp/draft.html',
+    controller: 'RfpCtrl'
   });
 }]);
 
@@ -25,6 +28,10 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
 
   $http.get('data/rfp/myrfp.json').success(function(data){
     $scope.myrfp_data = data;
+  });
+
+  $http.get('data/rfp/draft.json').success(function(data){
+    $scope.draft_data = data;
   });
 
   $scope.current_user = 'Matt';
@@ -48,8 +55,17 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
       $('#acceptDlg').close();
     });
 
-    $('.view-button').on('click', function() {
+    $('.myrfp-view-button').on('click', function() {
       $('#myrfp-item').show();
+    });
+
+    $('.draft-view-button').on('click', function() {
+      $('#draft-item').show();
+    });
+
+    $('#draft-continue-button').on('click', function() {
+      $('#postrfpDlg').modal('toggle');
+      $('#postrfpDlg').close();
     });
 
     $('#pickup-info').parent().addClass('active');

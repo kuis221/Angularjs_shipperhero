@@ -68,15 +68,15 @@ body {
   margin-top: 4px;
 }
 
-.pause-button {
+.myrfp-pause-button {
 
 }
 
-.view-button {
+.myrfp-view-button {
 
 }
 
-.view-button>label {
+.myrfp-view-button>label {
   margin-right: 5px;
   margin-bottom: 0;
   cursor: pointer;
@@ -600,6 +600,10 @@ body {
   display: none;
 }
 
+#draft-item {
+  display: none;
+}
+
 #test-data {
   color: #757c83;
 }
@@ -624,6 +628,10 @@ body {
   padding: 0;
 }
 
+.my-modal-body img {
+  border-radius: 50%;
+}
+
 .my-modal-footer {
   border: none;
   text-align: center;  
@@ -643,6 +651,22 @@ body {
 
 .my-modal-dialog {
   width: 439px;
+}
+
+.modal-rate-body {
+  display: inline-block;
+}
+
+.modal-rate-body label {
+  color: #85919f;
+}
+
+.modal-rate-body span {
+  color: #85919f; 
+}
+
+#in-transit-item {
+  display: none;
 }
 
 @media (min-width: 992px) {

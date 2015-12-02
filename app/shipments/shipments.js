@@ -12,6 +12,9 @@ shipmentsApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/shipments/delivered', {
     templateUrl: 'shipments/delivered.html',
     controller: 'ShipmentsCtrl'
+  }).when('/shipments/in_transit', {
+    templateUrl: 'shipments/in_transit.html',
+    controller: 'ShipmentsCtrl'
   });
 }]);
 
@@ -22,6 +25,10 @@ shipmentsApp.controller('ShipmentsCtrl', ['$scope', '$http', function ($scope, $
   
   $http.get('data/shipments/confirmed.json').success(function(data){
     $scope.confirmed_data = data;
+  });
+
+  $http.get('data/shipments/in_transit.json').success(function(data){
+    $scope.in_transit_data = data;
   });
 
   $scope.submit = function() {
@@ -39,6 +46,10 @@ shipmentsApp.controller('ShipmentsCtrl', ['$scope', '$http', function ($scope, $
 
     $('body').on('click', '.delivered-view-button', function() {
       $('#delivered-item').show();
+    });
+
+    $('body').on('click', '.in-transit-view-button', function() {
+      $('#in-transit-item').show();
     });
 
     $('#cancel-continue-button').on('click', function() {
