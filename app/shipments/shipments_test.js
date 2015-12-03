@@ -8,8 +8,8 @@ describe('myApp.shipments module', function() {
 
     it('should ....', inject(function($controller) {
       //spec body
-      var rfpCtrl = $controller('ShipmentsCtrl');
-      expect(rfpCtrl).toBeDefined();
+      var shipmentsCtrl = $controller('ShipmentsCtrl');
+      expect(shipmentsCtrl).toBeDefined();
     }));
   });
 });

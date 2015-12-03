@@ -6,6 +6,7 @@ var myApp = angular.module('myApp', [
   'myApp.rfp',
   'myApp.user',
   'myApp.shipments',
+  'myApp.carriers',
   'myApp.version'
 ]);
 

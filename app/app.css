@@ -41,6 +41,39 @@ body {
   margin-top: 30px;
 }
 
+#landing-nav {
+  margin-top: 30px;
+}
+
+#landing-nav .sign-up {
+  background: #ff0000;
+  color: #ffffff !important;  
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 12px;
+  text-decoration: none !important;  
+  line-height: normal !important;
+  font-weight: bold;
+  width: 72px;
+  display: inline-block;
+  text-align: center;
+}
+
+#landing-nav .login {
+  background: #0000ff;
+  color: #ffffff !important;  
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 12px;
+  text-decoration: none !important;  
+  line-height: normal !important;
+  font-weight: bold;
+  width: 72px;
+  display: inline-block;
+  text-align: center;
+  margin-left: 21px;
+}
+
 .my-navbar-header {
   /*margin-right: 20px !important;*/
 }
@@ -51,6 +84,7 @@ body {
   border-bottom: 2px solid #1f66c2 !important;
   max-width: 1170px;
   margin: 0 auto;
+  min-height: 103px;
 }
 
 .my-caret {
@@ -84,6 +118,7 @@ body {
 
 .action-button>label {
   cursor: pointer;
+  margin-bottom: 0; 
 }
 
 .navbar-default .navbar-nav>li>a {
@@ -225,6 +260,10 @@ body {
   font-weight: bold;
 }
 
+.my-alert-success span {
+  color: #495159;
+}
+
 .my-alert>img {
   width: 19px;
   height: 16px;
@@ -327,8 +366,7 @@ body {
   padding: 6px 6px;
   font-size: 12px;
   text-decoration: none !important;  
-  line-height: normal !important;
-  margin-top: 10px;
+  line-height: normal !important;  
 }
 
 .action-button:hover {
@@ -340,6 +378,36 @@ body {
 }
 
 .action-button:focus {
+  border: 1px solid #1f66c2;
+  border-radius: 5px;
+  outline: none;
+}
+
+.search-button {
+  display: inline-block;
+  background: #ffffff;
+  color: #a3a3a3 !important;
+  border: 1px solid #a3a3a3 !important;
+  border-radius: 5px;
+  padding: 10px 10px;
+  font-size: 12px;
+  text-decoration: none !important;
+  line-height: normal !important;  
+}
+
+#search-email::-webkit-input-placeholder {
+  color: #91b4e1;
+}
+
+.search-button:hover {
+  text-decoration: none !important;
+  background-color: #1f66c2;
+  border: 1px solid #1f66c2;
+  color: #ffffff;
+  border-radius: 5px;
+}
+
+.search-button:focus {
   border: 1px solid #1f66c2;
   border-radius: 5px;
   outline: none;
@@ -577,6 +645,27 @@ body {
   color: #565d64;
 }
 
+.profile-item {
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+.profile-item img {
+  border-radius: 50%;
+}
+
+.profile-item-title {
+  color: #4a84ce;  
+  margin-bottom: 0;
+  text-align: right;
+  font-weight: bold;
+}
+
+.profile-item-desc {
+  color: #565d64;
+  font-weight: bold;
+}
+
 .pickup-section>h3, .delivery-section>h3, .shipment-section>h3, .shipment-timing-section>h3, .job-section>h3 {
   color: #4a84ce;
 }
@@ -601,6 +690,10 @@ body {
 }
 
 #draft-item {
+  display: none;
+}
+
+#pending-item {
   display: none;
 }
 
@@ -653,15 +746,15 @@ body {
   width: 439px;
 }
 
-.modal-rate-body {
+.modal-inline-body {
   display: inline-block;
 }
 
-.modal-rate-body label {
+.modal-inline-body label {
   color: #85919f;
 }
 
-.modal-rate-body span {
+.modal-inline-body span {
   color: #85919f; 
 }
 
@@ -669,9 +762,71 @@ body {
   display: none;
 }
 
+.invite-carriers {
+  margin-top: 30px;
+}
+
+.status-active {
+  color: #1f66c2 !important;
+}
+
+.status-pending {
+  color: #ff0000 !important;
+}
+
+.add-new {
+  color: #4d7ec9;
+  text-decoration: none;
+  font-size: 17px;
+  margin-top: 11px;
+  display: inline-block;
+}
+
+.add-new:hover, .add-new:focus {
+  text-decoration: none;
+}
+
+.add-new span {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 10px;
+  color: #4d7ec9;
+}
+
+.add-new img {
+  vertical-align: top;
+}
+
+.profile-section {
+  width: 711px;
+  margin: 40px auto;
+}
+
+.profile-section h2 {
+  color: #1f66c2;
+  font-weight: bold;
+  margin: 0;
+}
+
+.profile-right-section {
+  margin-top: 20px;
+}
+
 @media (min-width: 992px) {
   .my-col-md-offset {
     margin-left: 12.5% !important;
+  }
+
+  .my-col-md-offset-3 {
+    margin-left: 21%;
+  }
+
+  .my-modal-lg {
+    width: 960px !important;
+  }
+
+  .profile-right-section {
+    margin-top: 95px;
   }
 }
 

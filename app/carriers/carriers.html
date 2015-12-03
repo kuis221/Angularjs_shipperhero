@@ -1,0 +1,36 @@
+<div class="invite-carriers">
+  <div class="row">
+    <div class="col-md-9">
+      <input type="text" class="form-control" id="search-email" placeholder="You can insert multiple email addresses separated by space"/>
+    </div>
+    <div class="col-md-3">
+      <a href="" class="search-button">INVITE CARRIERS</a>
+    </div>
+  </div>
+</div>
+<div class="rfp-section">
+  <div class="rfp-header">
+    <div class="rfp-header-middle">
+      <span>INVITED CARRIERS</span>
+    </div>
+  </div>
+  <div class="rfp-body">
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Contact</th>
+          <th>Status</th>
+          <th>Invite Date</th>          
+        </tr>
+      </thead>
+      <tbody ng-repeat="data in carriers_data track by $index">
+        <tr>
+          <td>{{data.contact}}</td>
+          <td ng-class="data.status == 'Active' ? 'status-active' : 'status-pending'">{{data.status}}</td>
+          <td>{{data.inviteDate}}</td>          
+        </tr>
+      </tbody>
+    </table>
+    <div ng-include="'carriers/dialog.html'" style="display: inline-block"></div>
+  </div>
+</div>

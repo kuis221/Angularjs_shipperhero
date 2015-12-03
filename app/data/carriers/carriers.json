@@ -1,0 +1,17 @@
+[
+  {
+    "contact": "testemail@testemail.com",
+    "status": "Active",
+    "inviteDate": "11/9/2015"
+  },
+  {
+    "contact": "testemail@testemail.com",
+    "status": "Pending",
+    "inviteDate": "11/9/2015"
+  },
+  {
+    "contact": "testemail@testemail.com",
+    "status": "Active",
+    "inviteDate": "11/9/2015"
+  }
+]

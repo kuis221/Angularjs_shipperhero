@@ -18,6 +18,9 @@ rfpApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/rfp/draft', {
     templateUrl: 'rfp/draft.html',
     controller: 'RfpCtrl'
+  }).when('/rfp/pending', {
+    templateUrl: 'rfp/pending.html',
+    controller: 'RfpCtrl'
   });
 }]);
 
@@ -32,6 +35,10 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
 
   $http.get('data/rfp/draft.json').success(function(data){
     $scope.draft_data = data;
+  });
+
+  $http.get('data/rfp/pending.json').success(function(data){
+    $scope.pending_data = data;
   });
 
   $scope.current_user = 'Matt';
@@ -57,6 +64,10 @@ rfpApp.controller('RfpCtrl', ['$scope', '$http', function ($scope, $http) {
 
     $('.myrfp-view-button').on('click', function() {
       $('#myrfp-item').show();
+    });
+
+    $('.pending-view-button').on('click', function() {
+      $('#pending-item').show();
     });
 
     $('.draft-view-button').on('click', function() {
