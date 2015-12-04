@@ -4,14 +4,6 @@ grunt.initConfig({
 
 pkg: grunt.file.readJSON('package.json'),
 
-/**
-* Task
-**/
-
-task: {
-
-}
-
 });
 
 grunt.loadNpmTasks('grunt-contrib-sass');
