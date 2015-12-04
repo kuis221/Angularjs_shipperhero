@@ -313,8 +313,7 @@ body {
 }
 
 .rfp-header-middle {
-  width: 100%;
-  float: left;
+  width: 100%;  
   background-color: #1f66c2;  
 }
 
@@ -418,8 +417,50 @@ body {
 
 .footer {
   height: 100px;
+  margin-bottom: 30px;
 }
 
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.footer-links>li {
+  float: left;
+  margin-left: 36px;
+}
+
+.footer-links>li>a {
+  color: #4e4e4e;
+  font-size: 16px;
+}
+
+.footer-links i {
+  font-size: 17px;
+}
+
+.social-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.social-links>li {
+  float: left;
+  margin-left: 23px;
+}
+
+.social-links>li>a {
+  color: #4e4e4e;
+  font-size: 16px;
+}
+
+.social-links i {
+  font-size: 17px;
+}
 .steps {
 
 }
@@ -511,8 +552,7 @@ body {
   width: 85% !important;
 }
 
-.step-content {
-  margin-top: 22px;
+.step-content {  
   padding: 20px 0;
   border-top: 1px solid #d4dae1;
   width: 500px;
@@ -922,7 +962,88 @@ body {
   text-align: center;
 }
 
+.signup-form {
+  width: 689px;
+  margin: 45px auto;
+  border: 1px solid #ccc;
+  display: table;
+  position: relative;
+}
+
+.signup-header {
+  width: 100%;  
+  background-color: #1f66c2;  
+}
+
+.signup-header>span {
+  color: #ffffff;
+  font-size: 20px;
+  font-weight: bold;
+  display: block;
+  padding: 25px 17px;
+  text-align: center;
+}
+
+.signup-body {
+  margin: 20px 0;
+}
+
+.signup-form-button {
+  width: 219px;
+  margin: 30px auto 0;
+}
+
+.or {
+  display: none;
+}
+
+.social-buttons {
+  margin-top: 20px;
+}
+
 @media (min-width: 992px) {
+  .social-buttons {
+    margin-top: 90px;
+  }
+
+  .signup-left {
+    border-right: 1px solid #ccc;
+    margin-bottom: 39px;
+    padding-right: 39px;
+  }
+
+  .or {
+    display: inline-block;
+    margin-left: -43px;
+    margin-top: 130px;
+    position: absolute;
+    top: -1px;
+    right: 316px;
+  }
+
+  .or>a {
+    text-decoration: none;
+    position: relative;
+    border-radius: 50%;
+    display: inline-block;  
+    border: 5px solid #1f66c2;
+    background-color: #1f66c2;
+    height: 54px;
+  }
+
+  .or>a>span {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: inline-block;
+    background-color: #2661ae;
+    border: 1px solid #234b80;
+    padding: 8px 7px;
+    font-size: 20px;
+    font-weight: bold;
+    color: #fff;
+  }
+
   .landing-tutorial h2 {
     margin: 0;
   }
@@ -953,7 +1074,7 @@ body {
 
 @media screen and (max-width: 991px) {
   .navbar-brand img {
-    width: 123px;  
+    width: 123px;
   }
 }
 

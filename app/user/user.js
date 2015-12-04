@@ -9,6 +9,9 @@ userApp.config(['$routeProvider', function ($routeProvider) {
   }).when('/user/myprofile', {
   	templateUrl: 'user/myprofile.html',
   	controller: 'UserCtrl'
+  }).when('/user/sign_up', {
+  	templateUrl: 'user/sign_up.html',
+  	controller: 'UserCtrl'
   });
 }]);
 

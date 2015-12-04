@@ -1,0 +1,67 @@
+<div ng-include="'partials/landing_header.html'"></div>
+<div class="signup-form">  
+  <div class="signup-header">
+    <span>SIGNUP</span>
+  </div>  
+  <div class="signup-body">
+    <form ng-submit="submit()" role="form">
+      <div class="col-md-6 signup-left">
+        <div class="form-group required">
+          <label for="user name" class="control-label my-control-label required">Name*</label>
+          <input type="text" class="form-control required" id="user-name" placeholder="Enter your user name" />
+        </div>
+        <div class="form-group required">
+          <label for="user email" class="control-label my-control-label required">Email*</label>
+          <input type="text" class="form-control required" id="user-email" placeholder="Enter your user email" />
+        </div>
+        <div class="form-group">
+          <label for="user company" class="control-label my-control-label">Company</label>
+          <input type="text" class="form-control" id="user-company" placeholder="Enter your company" />
+        </div>
+        <div class="form-group">
+          <label for="user title" class="control-label my-control-label">Title</label>
+          <input type="text" class="form-control" id="user-title" placeholder="Enter your title" />
+        </div>
+        <div class="signup-form-button">          
+          <input type="submit" id="btn-signup" class="action-button" value="SIGN UP" />
+          <a href="" class="action-button">CANCEL</a>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="or">
+          <a><span>OR</span></a>
+        </div>
+        <div class="social-buttons">
+          <div class="col-md-12">
+            <div class="form-group">
+              <a class="btn btn-block btn-social btn-facebook" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-facebook']);">
+                <span class="fa fa-facebook"></span> Sign in with Facebook
+              </a>
+            </div>
+          </div>
+          <div class="col-md-12">
+            <div class="form-group">
+              <a class="btn btn-block btn-social btn-linkedin" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-linkedin']);">
+                <span class="fa fa-linkedin"></span> Sign in with LinkedIn
+              </a>
+            </div>
+          </div>        
+          <div class="col-md-12">
+            <div class="form-group">
+              <a class="btn btn-block btn-social btn-google" onclick="_gaq.push(['_trackEvent', 'btn-social', 'click', 'btn-google']);">
+                <span class="fa fa-google-plus"></span> Sign in with Google+
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</div>
+<script type="text/javascript">
+$(function(){
+  $('#btn-signup').on('click', function() {
+    window.location.href = "#/rfp/dashboard";
+  });
+});
+</script>
