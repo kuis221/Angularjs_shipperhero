@@ -12,7 +12,13 @@
     "angular-mocks": "~1.4.0",
     "html5-boilerplate": "~5.2.0",
     "ng-token-auth": "~0.0.28",
-    "font-awesome": "fontawesome#~4.5.0"
+    "font-awesome": "fontawesome#~4.5.0",
+    "angular-bootstrap": "~0.14.3",
+    "angular-resource": "~1.4.8",
+    "bootstrap-star-rating": "~3.5.5",
+    "angular-animate": "~1.4.8",
+    "bootstrap-social": "~4.11.0",
+    "jquery": "~2.1.4"
   },
   "resolutions": {
     "angular": "1.4.8"
